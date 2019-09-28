@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FormRegister" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGK-OQ-gOQ">
+                                <rect key="frame" x="32" y="95" width="350" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYm-tr-P4e">
+                                <rect key="frame" x="169" y="64" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-5W-NXa">
+                                <rect key="frame" x="32" y="120" width="350" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPl-cX-Qt6">
+                                <rect key="frame" x="32" y="145" width="350" height="17"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2FI-FZ-Fz0" appends="YES" id="IX9-Kz-A7w"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbw-7X-MAE">
+                                <rect key="frame" x="179.5" y="212" width="55" height="30"/>
+                                <state key="normal" title="Validate"/>
+                                <connections>
+                                    <action selector="validateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0c2-Kq-nq0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tbw-7X-MAE" firstAttribute="top" secondItem="cPl-cX-Qt6" secondAttribute="bottom" constant="50" id="4tD-3e-SJf"/>
+                            <constraint firstItem="YSi-5W-NXa" firstAttribute="top" secondItem="DGK-OQ-gOQ" secondAttribute="bottom" constant="8" id="6rW-fD-xhY"/>
+                            <constraint firstItem="Tbw-7X-MAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FQ3-Tu-bfw"/>
+                            <constraint firstItem="DGK-OQ-gOQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="H4g-aW-CZK"/>
+                            <constraint firstItem="cPl-cX-Qt6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="JPi-gV-36E"/>
+                            <constraint firstItem="jYm-tr-P4e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Qik-Iv-X05"/>
+                            <constraint firstItem="YSi-5W-NXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Td4-MW-F8m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPl-cX-Qt6" secondAttribute="trailing" constant="32" id="hkG-Ik-yxz"/>
+                            <constraint firstItem="cPl-cX-Qt6" firstAttribute="top" secondItem="YSi-5W-NXa" secondAttribute="bottom" constant="8" id="t7a-u4-hBf"/>
+                            <constraint firstItem="jYm-tr-P4e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v7C-qt-odq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YSi-5W-NXa" secondAttribute="trailing" constant="32" id="vmv-Bs-WC7"/>
+                            <constraint firstItem="DGK-OQ-gOQ" firstAttribute="top" secondItem="jYm-tr-P4e" secondAttribute="bottom" constant="10" id="wbi-d5-vNg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGK-OQ-gOQ" secondAttribute="trailing" constant="32" id="zpM-VL-ha4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="DGK-OQ-gOQ" id="10c-fP-t12"/>
+                        <outlet property="password" destination="cPl-cX-Qt6" id="q7m-sD-eg5"/>
+                        <outlet property="phone" destination="YSi-5W-NXa" id="mUl-ic-A8M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2FI-FZ-Fz0">
+                    <connections>
+                        <action selector="handleSeePassword:" destination="BYZ-38-t0r" id="0gt-yl-323"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="132" y="102"/>
+        </scene>
+    </scenes>
+</document>
